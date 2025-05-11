@@ -1,0 +1,10 @@
+streamlit
+biopython
+py3Dmol
+torch
+torchvision
+torchaudio
+transformers
+accelerate
+einops
+google-generativeai

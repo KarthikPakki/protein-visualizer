@@ -8,10 +8,9 @@ from google import generativeai as genai
 st.set_page_config(page_title="🧬 Protein Viewer", layout="wide")
 st.title("🧬 AI-Powered Protein Structure Viewer")
 
-# Get Gemini API key from user
-api_key = st.sidebar.text_input("🔑 Enter your Gemini API Key", type="password")
+api_key = st.secrets.get("GEMINI_API_KEY")
 if not api_key:
-    st.warning("Please provide your Gemini API key to proceed.")
+    st.error("Missing Gemini API key. Set it in Streamlit Cloud secrets.")
     st.stop()
 
 # Initialize Gemini client
